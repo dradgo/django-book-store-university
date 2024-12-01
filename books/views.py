@@ -46,7 +46,7 @@ def add_category(request):
     return render(request, 'category_form.html', {'form': form})
 
 def category_list(request):
-    categories = Category.objects.all()
+    categories = Category.objects.all().order_by('name')
     return render(request, 'category_list.html', {'categories': categories})
 
 def edit_book(request, pk):

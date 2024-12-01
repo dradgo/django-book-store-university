@@ -38,8 +38,8 @@
     <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
-            <a href="?page=1&sort={{ sort_by }}">&laquo; первая</a>
-            <a href="?page={{ page_obj.previous_page_number }}&sort={{ sort_by }}">предыдущая</a>
+            <a href="?page=1&sort={{ sort_by }}&q={{ query }}">&laquo; первая</a>
+            <a href="?page={{ page_obj.previous_page_number }}&sort={{ sort_by }}&q={{ query }}">предыдущая</a>
         {% endif %}
 
         <span class="current">
@@ -47,8 +47,8 @@
         </span>
 
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}&sort={{ sort_by }}">следующая</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}&sort={{ sort_by }}">последняя &raquo;</a>
+            <a href="?page={{ page_obj.next_page_number }}&sort={{ sort_by }}&q={{ query }}">следующая</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}&sort={{ sort_by }}&q={{ query }}">последняя &raquo;</a>
         {% endif %}
     </span>
     </div>
